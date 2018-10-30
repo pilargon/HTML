@@ -1,4 +1,10 @@
-﻿.copyright {
+﻿*{
+    margin:0;
+    padding:0;
+}
+
+
+.copyright {
    text-align:center;
 }
 .titulo {
@@ -9,5 +15,23 @@
     text-align:center;
 }
 .frase{
-    text-indent:20px;
+    text-indent:25px;
 }
+.marco{
+    margin:0 auto;
+    width:600px;
+    background-color:white;
+}
+.frasefinal{
+    text-align:center;
+    blockquotes;
+}
+.clasificacion{
+    text-indent:30px;
+}
+body{
+    background-color:blue;
+}
+
+
+

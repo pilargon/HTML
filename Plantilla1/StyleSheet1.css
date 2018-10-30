@@ -1,0 +1,147 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+.body {
+    width: auto;
+   
+}
+
+.cabeceraizq {
+    width: 24%;
+    float: left;
+    font-family:Bahnschrift;
+    color:gray;
+}
+
+.flotante {
+    width: 50%;
+    float: right;
+    border-radius: 20px;
+    background-color: maroon;
+    margin:9px;     
+    padding:17px; 
+}
+
+.caja {
+    width: 20%;
+    float:left;
+    color: white;
+    text-align:center;  
+}
+
+
+.clear {
+    clear: both;
+}
+
+.lorem {
+   text-align:center;
+   
+}
+.imagen{
+    text-align:center;
+}
+.cajascentrales {
+    float: left;
+    width: 29%;
+    margin:20px;
+    padding:27px;
+}
+.central {
+    width: 98%;
+    float: left;
+    margin: 13px; 
+    padding: 1px;
+}
+a{
+    color:red;
+    text-decoration:none;
+}
+a:hover{       /*para un enlace cuando se visita se ponga en color verde*/
+    color:green;
+}
+a:visited{
+    color:orange;      /*cuando una pagina ya fue visitada,esta naranja*/
+}
+.our {
+    width: 17%;
+    border-radius: 20px;
+    background-color: maroon;
+    margin: auto;
+    color: white;
+    text-align: center;
+    
+}
+.gente {
+    width: 107%;
+    float: left;
+    margin: 13px;
+    padding: 0px;
+    text-align:left;
+}
+.gentefoto {
+    width: 17%;
+    float: left;
+    margin: 13px;
+    padding: 20px;
+    text-align: left;
+}
+.fotosviejas {
+    width: 98%;
+    float: left;
+    margin: 13px;
+    padding: 0px;
+}
+.vieja {
+    width: 31%;
+    float: left;
+    margin: 13px;
+    padding: 0px;
+}
+.partegris {
+    background-color:lightgrey;
+    width: 100%;
+    float: left;
+    
+}.fotofinal{
+    float:left;
+}.titulorojo{
+    color:body{color:red;}
+}
+.latestfoto {
+    float: left;
+    width: 82%;
+    margin: 15px;
+    text-align: left;
+}
+.latestfotosjuntas {
+    float: left;
+    width: 60%;
+    margin: 13px;
+    text-align:left;
+}
+.direccion {
+    width: 112%;
+    margin: 13px;
+    text-align: left;
+    float:left;
+    padding:20px;
+}
+.frasesobrecabeza {
+    margin: -12px;
+    text-align: left;
+}
+.contacto {
+    float: left;
+    width: 60%;
+    margin: 13px;
+    text-align: left;
+}
+.gristocho {
+    width: 98%;
+    float: left;
+    margin: 13px;
+    padding: 0px;
+}
+
