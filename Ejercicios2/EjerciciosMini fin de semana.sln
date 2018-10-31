@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{825DF30C-B6BC-486D-BC72-69674EB6F86E}"
+	ProjectSection(SolutionItems) = preProject
+		HTMLParte1.html = HTMLParte1.html
+		HTMLParte3.html = HTMLParte3.html
+		StyleSheet1.css = StyleSheet1.css
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {507914CD-37B8-4F8F-950C-22CEF33A599E}
+	EndGlobalSection
+EndGlobal

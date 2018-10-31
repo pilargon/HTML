@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--//Mostrar en pantalla las diferentes opciones
+    //"Pulsa 1 para contar normalmente.",
+    //"Pulsa 2 para contar como un ingeniero de la NASA.",
+    //"Pulsa 3 para contar como un estudiante universitario.",
+    //"Pulsa 4 para contar como en barrio sésamo.",
+    //"Pulsa 5 para contar como un cartero.",
+    //"Pulsa 6 para salir."
+    //Que el usuario elija una opción y mostrar en pantalla la opción que ha
+    //elegido (o que la opción elegida no existe) y acabar el programa.-->
+    <script>
+
+
+            let option, countLimit, cardValue;
+            let NORMAL_COUNT = 1, NASA_COUNT = 2, STUDENT_COUNT = 3, SESAME_STREET_COUNT = 4, MAILMAN_COUNT = 5,
+                EXIT = 6;
+
+        do {
+            let option = parseInt(prompt("Pulsa 1 para contar normalmente." +
+                "\n Pulsa 2 para contar como un ingeniero de la NASA." +
+                "\n Pulsa 3 para contar como un estudiante universitario." +
+                "\n Pulsa 4 para contar como en barrio sesamo." +
+                "\n Pulsa 5 para contar como un cartero." +
+                "\n Pulsa 6 para salir."));
+
+            switch (option) {
+
+                case NORMAL_COUNT:
+                    do {
+                        countLimit = parseInt(prompt("¿Hasta qué número quieres contar (número mayor que 1)?"));
+
+                    } while (countLimit <= 0);
+
+                    for (let i = 1; i <= countLimit; i++) {
+                        alert(i);
+                    }
+                    break;
+                case NASA_COUNT:
+                    do {
+                        countLimit = parseInt(prompt("¿Hasta qué número quieres contar (número mayor que 1)?"));
+
+                    } while (countLimit <= 0);
+
+                    for (let i = countLimit; i >= 0; i--) {
+                        alert(i);
+                    }
+                    alert("¡¡¡Ignición!!!");
+                    break;
+                case STUDENT_COUNT:
+                    do {
+                        countLimit = parseInt(prompt("¿Hasta qué número quieres contar (número mayor que 1)?"));
+
+                    } while (countLimit <= 0);
+
+                    for (let i = 1; i <= countLimit; i++) {
+
+                        cardValue = i % 10;
+                        if (cardValue == 1) {
+                            alert("Ás");
+                        }
+                        else if (cardValue == 8) {
+                            alert("Sota");
+                        }
+                        else if (cardValue == 9) {
+                            alert("Caballo");
+                        }
+                        else if (cardValue == 0) {
+                            alert("Rey");
+                        }
+                        else {
+                            alert(cardValue);
+                        }
+                    }
+                    break;
+
+                case SESAME_STREET_COUNT:
+                    do {
+                        countLimit = parseInt(prompt("¿Hasta qué número quieres contar (número mayor que 1)?"));
+
+                    } while (countLimit <= 0);
+
+
+                    for (let i = 1; i <= countLimit; i++) {
+                        alert("¡¡¡¡¡¡¡ " + i + " !!!!!!!");
+                    }
+                    break;
+
+                case MAILMAN_COUNT:
+                    do {
+                        countLimit = parseInt(prompt("¿Hasta qué número quieres contar (número mayor que 1)?"));
+
+                    } while (countLimit <= 0);
+
+
+                    for (let i = 1; i <= countLimit; i += 2) {
+                        alert(i);
+                    }
+                    for (let i = 2; i <= countLimit; i += 2) {
+                        alert(i);
+                    }
+                    break;
+
+                case EXIT:
+                    break;
+
+                default:
+                    alert("Esa opción no existe.");
+                    break;
+
+            }
+        }
+            while (option != EXIT);
+            alert("Pulsa cualquier tecla para salir...");
+
+    </script>
+
+
+
+</body>
+</html>
