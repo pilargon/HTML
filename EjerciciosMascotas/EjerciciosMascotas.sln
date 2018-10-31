@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B09EB956-F61B-49AA-A135-9B601DB755C2}"
+	ProjectSection(SolutionItems) = preProject
+		Mascotas.html = Mascotas.html
+		Script.js = Script.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {142228F5-B80B-4E64-80BC-D6DAAAD8BE84}
+	EndGlobalSection
+EndGlobal
