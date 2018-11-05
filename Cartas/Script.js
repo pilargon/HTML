@@ -44,15 +44,15 @@ function mostrarNombre(carta) {
 //el daño como título y subtítulo, la descripción como un párrafo y una imagen(la especificada 
 //en image_url como src).
 
-//const cartasAMostrar = 3;
-//let mensaje = "";
-//mensaje += "<ol>";
-//for (let i = 0; i < cartasAMostrar; i++) {
-//    mensaje += "<li>" + "<h1>" + carta[i].nombre + "</h1>" + "<h2>" + carta[i].danio + "</h2>"
-//        + "<p>" + carta[i].descripcion + "</p>" + "<img id='carta'src=" + carta[i].url_imagen + ">" + "</li>";
-//}
-//mensaje += "</ol>";
-//document.getElementById("mostrar_resultado").innerHTML = mensaje;
+const cartasAMostrar = 3;
+let mensaje = "";
+mensaje += "<ol>";
+for (let i = 0; i < cartasAMostrar; i++) {
+    mensaje += "<li>" + "<h1>" + carta[i].nombre + "</h1>" + "<h2>" + carta[i].danio + "</h2>"
+        + "<p>" + carta[i].descripcion + "</p>" + "<img id='carta'src=" + carta[i].url_imagen + ">" + "</li>";
+}
+mensaje += "</ol>";
+document.getElementById("mostrar_resultado").innerHTML = mensaje;
 
 
 ////var div = document.getElementById("mostrar_resultado");
