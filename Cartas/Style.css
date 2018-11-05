@@ -1,0 +1,31 @@
+﻿#carta {
+    /* Add shadows to create the "card" effect */
+   
+    transition: 1s;
+    width:200px;
+}
+
+/* On mouse-over, add a deeper shadow */
+    #carta:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        transform: rotate(20deg);
+        transform: scale(1.5, 1.5);
+    }
+
+
+ol {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+li{
+    float:left;
+    padding:0 20px;
+}
+
+html {
+    background: url("https://eteknix-eteknixltd.netdna-ssl.com/wp-content/uploads/2015/07/hearthstone-new-expansion.jpg") no-repeat center fixed;
+    background-size: cover;
+}
