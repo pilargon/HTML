@@ -18,13 +18,13 @@ class Carta {
 
 
 let carta = [];
-let elAlmacen = new Carta("El Almacen", 3, "Cartas" + "/" + "BOT_568" + ".jpg", "Roba 3 cartas");
-let punicionSagrada = new Carta("Punicion Sagrada", 3, "Cartas" + "/" + "CS1_130" + ".jpg", "Hace +2");
-let bendicion = new Carta("Bendicion de poderio", 3, "Cartas" + "/" + "CS2_087" + ".jpg", "Otorga +3");
-let campeon = new Carta("Campeon de Ventormenta", 6, "Cartas" + "/" + "CS2_222" + ".jpg", "Tus demas esbirros tienen +1/+1");
-let acolito = new Carta("Acolito de dolor", 1, "Cartas" + "/" + "EX1_007" + ".jpg", "Roba una carta cuando le atacan");
-let abisario = new Carta("Abisario", 1, "Cartas" + "/" + "CS2_065" + ".jpg", "Provocar");
-carta.push(elAlmacen);
+let elVertedero = new Carta("El vertedero de almas", 3, "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/ace9b062826c3f845dafa75e2deeaad99e0b71953266d7ca9758530e721ddf65.png", "Roba 3 cartas");
+let punicionSagrada = new Carta("Punicion Sagrada", 3, "https://art.hearthstonejson.com/v1/render/latest/esMX/512x/CS1_130.png", "Hace +2");
+let bendicion = new Carta("Bendicion de poderio", 3, "https://media.pypgamers.com/playhs/cartas/es/42.png", "Otorga +3");
+let campeon = new Carta("Campeon de Ventormenta", 6, "http://media.pypgamers.com/playhs/cartas/es/567.png", "Tus demas esbirros tienen +1/+1");
+let acolito = new Carta("Acolito de dolor", 1, "https://media.pypgamers.com/playhs/cartas/es/34.png", "Roba una carta cuando le atacan");
+let abisario = new Carta("Abisario", 1, "https://media.pypgamers.com/playhs/cartas/es/664.png", "Provocar");
+carta.push(elVertedero);
 carta.push(punicionSagrada);
 carta.push(abisario);
 carta.push(bendicion);

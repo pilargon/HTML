@@ -6,8 +6,7 @@ function cambiarFecha() {
     //month = document.getElementById("month").value;//1a parte
     //day = document.getElementById("day").value; //1a parte
 
-    let fechaCogida = document.querySelector('input[type="date"]');//2a parte
-   
+    let fechaCogida = document.querySelector('input[type="date"]');//2a parte 
     let xhr = new XMLHttpRequest();
     //xhr.open("GET", "https://api.nasa.gov/planetary/apod?api_key=2oqMwUicGmGKIUdJQv6LDbQZGFcVVskfnBTKLZFU&date="
     //    + year + "-" + month + "-" + day); //1a parte
@@ -30,11 +29,3 @@ function cambiarFecha() {
     xhr.send();
 };
 
-function showData(date, title, explanation, image_url) {
-    let result = "<p>" + date + "</p>";
-    result += "<p>" + title + "</p>";
-    result += "<p>" + explanation + "</p>";
-    result += "<img src='" + image_url + "'/>";
-    document.getElementById("info").innerHTML = result;
-
-}
