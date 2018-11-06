@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8BFBBDD7-041F-44F8-AD04-C89698DFDEAD}"
+	ProjectSection(SolutionItems) = preProject
+		app.js = app.js
+		HTML1.html = HTML1.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C21E56AA-5C13-4938-B7E2-972605CA6A99}
+	EndGlobalSection
+EndGlobal
