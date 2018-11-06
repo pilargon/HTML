@@ -29,3 +29,10 @@ function cambiarFecha() {
     xhr.send();
 };
 
+function showData(date,title,explanation,image_url) {
+    let result = "<p>" + date + "</p>";
+    result += "<p>" + title + "</p>";
+    result += "<p>" + explanation + "</p>";
+    result += "<img src='" + image_url + "'/>";
+    document.getElementById("info").innerHTML = result;
+}

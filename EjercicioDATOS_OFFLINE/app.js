@@ -16,3 +16,27 @@ function getPerson() {
     document.getElementById("mostrar").innerHTML = persona.nombre + " " + persona.apellido;
     localStorage.setItem("persona", JSON.stringify(persona));//TENEMOS QUE PASARLO A JSON PORQUE SI NO,NO RECONOCE EL STRING
 }
+
+function cambiarFecha() {
+ 
+    let fechaCogida = document.querySelector('input[type="date"]');//2a parte 
+    let xhr = new XMLHttpRequest();
+   
+    xhr.open("GET", "https://api.nasa.gov/planetary/apod?api_key=2oqMwUicGmGKIUdJQv6LDbQZGFcVVskfnBTKLZFU&date="
+        + fechaCogida.value);//2a parte
+
+    xhr.onreadystatechange = function () {
+
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4 & xhr.status === 200) {
+
+            let responseObject = JSON.parse(xhr.response);
+            showData(responseObject.url);
+
+        } else if (xhr.readyState === 4 & xhr.status === 400) {
+            document.getElementById("info").innerHTML = "Fecha incorrecta";
+        }
+
+    };
+    xhr.send();
+};
