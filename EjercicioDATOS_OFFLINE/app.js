@@ -19,11 +19,11 @@ function getPerson() {
 
 function cambiarFecha() {
  
-    let fechaCogida = document.querySelector('input[type="date"]');//2a parte 
+    let fechaCogida = document.querySelector('input[type="date"]');
     let xhr = new XMLHttpRequest();
    
     xhr.open("GET", "https://api.nasa.gov/planetary/apod?api_key=2oqMwUicGmGKIUdJQv6LDbQZGFcVVskfnBTKLZFU&date="
-        + fechaCogida.value);//2a parte
+        + fechaCogida.value);
 
     xhr.onreadystatechange = function () {
 
@@ -40,3 +40,13 @@ function cambiarFecha() {
     };
     xhr.send();
 };
+function showData(image_url) {
+    
+    let result = "<img src='" + image_url + "'/>";
+    document.getElementById("info").innerHTML = result;
+}
+//1a pagina: pide nombre y apellidos
+
+//2a pagina:Pide fecha y nos muestra la foto de la nasa de esa fecha y abajo nombre y apellido
+
+//Que cargue primero la foto y luego los apellidos
