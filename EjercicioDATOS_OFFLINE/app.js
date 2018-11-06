@@ -3,10 +3,10 @@ if (boton !== null) {
     boton.addEventListener("click", getPerson);
 }
 
-let personaGuardada = JSON.parse(localStorage.getItem("persona"));//aqui tambien pasar a JSON
-if (personaGuardada !== null) {
-    document.getElementById("mostrar").innerHTML = personaGuardada.nombre + " " + personaGuardada.apellido;
-}
+//let personaGuardada = JSON.parse(localStorage.getItem("persona"));//aqui tambien pasar a JSON
+//if (personaGuardada !== null) {
+//    document.getElementById("mostrar").innerHTML = personaGuardada.nombre + " " + personaGuardada.apellido;
+//}
 
 function getPerson() {
     let nombre = document.getElementById("nombre").value;
@@ -31,7 +31,8 @@ function cambiarFecha() {
         if (xhr.readyState === 4 & xhr.status === 200) {
 
             let responseObject = JSON.parse(xhr.response);
-            showData(responseObject.url);
+            let personaGuardada = JSON.parse(localStorage.getItem("persona"));//aqui tambien pasar a JSON
+            showData(responseObject.url,personaGuardada.nombre,personaGuardada.apellido);
 
         } else if (xhr.readyState === 4 & xhr.status === 400) {
             document.getElementById("info").innerHTML = "Fecha incorrecta";
@@ -40,9 +41,11 @@ function cambiarFecha() {
     };
     xhr.send();
 };
-function showData(image_url) {
+function showData(image_url,nombre,apellido) {
     
     let result = "<img src='" + image_url + "'/>";
+    result += "<p>" + nombre + "</p>";
+    result+="<p>"+apellido+"</p>"
     document.getElementById("info").innerHTML = result;
 }
 //1a pagina: pide nombre y apellidos
