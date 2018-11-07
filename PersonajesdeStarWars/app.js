@@ -1,25 +1,29 @@
-//1- Utilizar la base de datos de Star Wars (disponible en https://swapi.co/documentation),
-//para obtener la lista de planetas y mostrarlos en un dropdown(etiqueta select).
 
-let xhr = new XMLHttpRequest();
-xhr.open("GET", "https://swapi.co/api");
-xhr.onreadystatechange = function () {
-    console.log(xhr.readyState);
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        let responseObject = JSON.parse(xhr.response);
-        showData(responseObject.planets);
-    } else if (xhr.readyState === 4 && xhr.status === 400) {
-        document.getElementById("info").innerHTML = "Fecha incorrecta";
+document.getElementById("buscar_btn").addEventListener("click", obtenerPersonas);//ponemos el "boton" en el js
+
+function obtenerPersonas() {
+
+    let nombre = document.getElementById("nombre").value;
+    let url = "https://swapi.co/api/people/?search=" + nombre;
+    //let url = "https://swapi.co/api/people/"+ /planets +"?search=" + nombre;//esto con los planetas y especies
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", url);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            mostrarDatos(JSON.parse(xhr.response));
+        }
+    };
+    xhr.send();
+}
+
+function mostrarDatos(responseObj) { //muestra las personas
+    let listaDeGente = responseObj.results;//results es un objeto con una lista dentro
+    let mensajeEnHtml = "";
+    for (let i = 0; i < listaDeGente.length; i++) {
+        let persona = listaDeGente[i];
+        let mensaje = "<p>" + persona.name + "-" + persona.birth_year + "</p>";
+        mensajeEnHtml += mensaje;
     }
-};
-xhr.send();
-
-function showData(planets) {
-    let result = "<p>" + planets + "</p>";
-    //result += "<p>" + people + "</p>";
-    //result += "<p>" + films + "</p>";
-    //result += "<p>" + species + "</p>";
-    //result += "<p>" + vehicles + "</p>";
-    //result += "<p>" + starships + "</p>";
-    document.getElementById("info").innerHTML = result;
+    document.getElementById("lista").innerHTML = mensajeEnHtml;
 }

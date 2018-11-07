@@ -3,11 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8BFBBDD7-041F-44F8-AD04-C89698DFDEAD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{85281BFC-8751-4058-80EE-B6393416337E}"
 	ProjectSection(SolutionItems) = preProject
 		app.js = app.js
-		bootcamp.txt = bootcamp.txt
-		HTML1.html = HTML1.html
+		indexedDB.html = indexedDB.html
 	EndProjectSection
 EndProject
 Global
@@ -15,6 +14,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C21E56AA-5C13-4938-B7E2-972605CA6A99}
+		SolutionGuid = {B4F116A3-0410-460F-88D6-82198E90B53C}
 	EndGlobalSection
 EndGlobal
