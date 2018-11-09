@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{984F7DF3-5C13-4493-8FF6-29DC67A927CA}"
+	ProjectSection(SolutionItems) = preProject
+		app.js = app.js
+		bootstrap.min.css = bootstrap.min.css
+		DarthTato.JPG = DarthTato.JPG
+		DarthTato2.JPG = DarthTato2.JPG
+		index.html = index.html
+		Texto.txt = Texto.txt
+		up.jpg = up.jpg
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF319B5B-4E89-4E8F-9525-B05444E74165}
+	EndGlobalSection
+EndGlobal

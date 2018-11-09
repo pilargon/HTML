@@ -1,0 +1,38 @@
+ COPIA DE SEGURIDAD POR SI AL HACER LA LISTA FALLA
+
+ function obtenerDatosPelicula() {
+    //console.log("VAMOS A COGER LA PELICULA DE INTERNET");
+    let xhr = new XMLHttpRequest();
+    let url = "https://api.themoviedb.org/3/discover/movie?api_key=4024f770e585ab0a055a70a260c83507&include_adult=false&page=1&with_companies=2&query=";
+    xhr.open("GET", url);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            let peliculas = JSON.parse(xhr.response);
+            mostrarDatos(peliculas);
+        }
+    };
+    xhr.send();
+}
+
+function mostrarDatos(pelis) {
+    let nombrePeliculas = [];
+    for (let i = 0; i < pelis.results.length; i++) {
+        nombrePeliculas.push(pelis.results[i].title);
+    }
+    localStorage.setItem("titulo", JSON.stringify(nombrePeliculas));
+    // se pueden usar removeItem y clearItem para borrar elementos guardados
+    //let result = "";
+
+    for (let i = 0; i < nombrePeliculas.length; i++) {
+        let texto = document.createTextNode(nombrePeliculas[i]);
+        let parrafo = document.createElement("li");
+        parrafo.setAttribute("class", "titulo col-sm-3 list-group-item");
+        parrafo.setAttribute("onclick", "alert('" + nombrePeliculas[i] + "')");
+        parrafo.appendChild(texto);
+        document.getElementById("fila_peliculas").appendChild(parrafo);
+        // para eliminar, usar elementoHTML.removeChild(elementoHTML)  
+    }
+
+
+
+}
