@@ -1,214 +1,107 @@
 OBJETIVO
-
 Queremos buscar personas de star wars, por nombre o seleccionando una especie 
-
 o un planeta y viendo las personas que estan en ese planeta o especie.
-
 Al mostrar personas, podemos seleccionarlos como parte de nuestro equipo, y 
-
 si los hemos seleccionado, quitarlos de nuestro equipo.
-
 En una página aparte, podemos ver el equipo y una vez más quitarlos o ponerlos 
-
 en él.
-
 ------------------------------------------------------------------------------
-
 -como saber como quiere buscar el cliente (si nombre, especie o planeta):
-
     opcion 1: dropdown en el que seleccionamos que metodo de busqueda usar
-
     opcion 2: 3 campos con un boton cada uno por cada tipo de busqueda
-
     opcion 3: que haya un boton y mire en que campos hay datos metidos
-
     opcion 4: un campo de busqueda que busque por personas, si no hay 
-
                 resultados, por planetas, si no hay resultados por especies
-
 -campos de busqueda
-
     - campo de texto
-
     - desplegable con planeta, especie o nombre (al cambiar el valor
-
         automaticamente empieza la busqueda)
-
         -ver si hay un evento al cambiar el valor, empezar la busqueda
-
             (https://www.w3schools.com/jsref/event_onchange.asp)
-
 - empezar la busqueda: 
-
     mirar que tipo de busqueda se quiere hacer
-
         que selecciona en el select
-
             https://www.w3schools.com/jsref/event_onchange.asp
-
     conectarme con la api
-
         -BUSCAR POR NOMBRE:
-
             buscar si api tiene un campo nombre
-
-            https://swapi.co/api/people/?search=h
-
-            
-
+            https://swapi.co/api/people/?search=h        
         -BUSCAR POR PLANETA:
-
             https://swapi.co/api/planets/?search=al
-
         -BUSCAR POR ESPECIES:
-
             https://swapi.co/api/species/?search=al
-
     https://swapi.co/api/
-
         people
-
         species
-
         planets
-
             /?search=
-
                 texto introducido - document.getElementById(...).value
-
-    texto+texto+texto = textotextotexto
-
-    
-
+    texto+texto+texto = textotextotexto   
     para hacer la busqueda
-
         xmlhttprequest
-
-            new
-
+           new
             open - "GET" y url. 
-
             onreadystatechange - 
-
                 mirar si readyState es 4 y status 200 (me ha devuelto los datos)
-
                     (mirar si readyState es 4 y luego ver el status... 404? 501? 403?...)
-
                 parsear la respuesta para poder usar en el codigo
-
                     respuesta llega en .response
-
-                    para convertir en objeto usamos JSON.parse()
-
+                   para convertir en objeto usamos JSON.parse()
                     dependiendo el tipo de objeto miramos unos datos u otros
-
                         tipo especie:
-
                             en results una lista de especies
-
                             dentro de cada especie una lista de people
-
                                 results -> una lista
-
                                 listaResults, foreach o for
-
                                 en la lista, cada item tiene .people
-
                             algo.algo.algo.listaDeUrlsDePersonas
-
                                 tendremos que pedir a la api lo que hay dentro
+                               de las urls
 
-                                de las urls
-
-            
-
+           
                             let peopleUrls = [];
-
                             let responseObject = JSON.parse(xhr.response);
-
                             let listaEspecies = responseObject.results;
-
                             let personasDeEspecie;
-
                             listaEspecies.forEach(function(especie) {
-
-                                personasDeEspecie = especie.people;
-
+                               personasDeEspecie = especie.people;
                                 personasDeEspecie.forEach(function(persona) {
-
                                     peopleUrls.push(persona);
-
                                 });
 
                             });
-
                             for(let i = 0; i < listaEspecies.length; i++) {
-
                                 personasDeEspecie = listaEspecies[i].people;
-
                                 for(let j=0; j < personasDeEspecie.length; j++) {
-
                                     peopleUrls.push(personasDeEspecie[j]);
-
                                 }
-
                             }
-
                             // aqui tengo la lista completa de urls de personas de 
-
                             //esa especie, llamar a una funcion pasandole la lista
-
             send
-
 quiero hacer una funcion al que le paso una lista de urls de personas
-
 y me de objetos de persona con nombre y año de nacimiento
-
         (name, birth_year)
-
     crear un objeto request
-
     open(GET, primer elemento de la lista de urls)
-
     send()
-
     onreadystatechange - al recibir los datos, haciamos la siguiente peticion
-
         open("GET", elemento de la lista de urls)
-
         send()
-
         cuando tengamos todos, crear a objetos
-
         llamo a una funcion con ellos que los muestre
-
 funcion que muestre los objetos
-
     lista de personas. for each y ponerlos en el html tendre que poner un boton,
-
         al hacer click en el boton,
-
             los copio en un segundo array de personas que son "del equipo". 
-
                 (arrayDeEquipo.push(persona))
-
             el array de personas del equipo lo guardo en local
-
                 localStorage.setItem("equipo", JSON.stringify(arrayDeEquipo));
-
-    
-
     usamos un ancla para enlazzar una pagina con la pagina equipo
-
         podemos usar localStorage, sessionStorage (para limpiar datos del 
-
                                             navegador, usar localStorage.clear()) 
-
-        indexedDB, .onupgradeneeded (comprobamos si la bbdd existe y esta al dia)
-
+       indexedDB, .onupgradeneeded (comprobamos si la bbdd existe y esta al dia)
 -la pagina donde veo el equipo
-
     let arrayDeEquipo = JSON.parse(localStorage.getItem("equipo"));
-
     si hay datos en arrayDeEquipo mostrar en la pagina
 
