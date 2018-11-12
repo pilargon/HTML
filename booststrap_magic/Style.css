@@ -1,0 +1,77 @@
+﻿body, html {
+    height: 120%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-image {
+    /* Full height */
+    height: 50%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Images used */
+.img1 {
+    background-image: url("https://i.pinimg.com/originals/49/50/3e/49503ee01d2ccaa913a44a69e077338e.jpg");
+}
+
+.img2 {
+    background-image: url("https://i3-img.7tv.de/pis/ezone/a115qgELB38wdEB-ZftIYFPQSp-HxjRVj8ghGONpO6WKv841WZDXu-7grdt8wYsc7V3U4bvf7vPijmM7DIc7tzW9O9EZihA2rSDLEpDikQ/profile:mag-996x562");
+}
+
+.img3 {
+    background-image: url("https://www.hdwallpapers.in/walls/the_avengers_movie_2012-HD.jpg");
+}
+
+.img4 {
+    background-image: url("https://i1.wp.com/thefreshimages.com/wp-content/uploads/2018/02/star-wars-wallpaper-3.jpg?resize=2560%2C1440&ssl=1");
+}
+
+.img5 {
+    background-image: url("http://images6.fanpop.com/image/photos/39200000/Zootopia-Wallpaper-disneys-zootopia-39294733-1920-1080.jpg");
+}
+
+
+/* Position text in the middle of the page/image */
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+    border: 10px solid #f1f1f1;
+    position: fixed; /* Stay fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+/*.logo {
+    background-color: #FF9;
+    overflow: hidden;
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+}*/
+

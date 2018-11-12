@@ -1,5 +1,5 @@
 (function init() {
-    //let actualizarBtn = document.getElementById("actualizar_btn");
+    //let actualizarBtn = document.getElementById("titulo_btn");
     //if (actualizarBtn !== null) {
     //    actualizarBtn.addEventListener("click", obtenerDatosPelicula);
     //}
@@ -16,16 +16,12 @@
     if (boton !== null) {
         boton.addEventListener("click", getName); //evento que cuando le das click hace el getname.Para "poner"el boton en el js.
     }
-    else {
-        obtenerDatosPelicula();
-    }
+
     let boton2 = document.getElementById("year_btn");
     if (boton2 !== null) {
         boton2.addEventListener("click", getYear);
     }
-    else {
-        obtenerDatosPelicula();
-    }
+
     let nombreGuardado = sessionStorage.getItem("titulo");
     if (nombreGuardado !== null) {
         document.getElementById("mostrar").innerHTML = nombreGuardado;
@@ -35,8 +31,8 @@
         document.getElementById("mostrar").innerHTML = yearGuardado;
     }
     function getName() {
-        let titulo = document.getElementById("titulo").value; //toma el valor del nombre metido en el boton
-        document.getElementById("mostrar").innerHTML = titulo;
+        let titulo = document.getElementById("actualizar_titulo").value; //toma el valor del nombre metido en el boton
+        obtenerDatosPelicula(titulo);
         sessionStorage.setItem("titulo", titulo); //con setitem pasamos un valor que guardamos en la bbdd interna
         
     }
@@ -50,10 +46,15 @@
 
 
 
-function obtenerDatosPelicula() {
+function obtenerDatosPelicula(titulo) {
     //console.log("VAMOS A COGER LA PELICULA DE INTERNET");
     let xhr = new XMLHttpRequest();
-    let url = "https://api.themoviedb.org/3/discover/movie?api_key=4024f770e585ab0a055a70a260c83507&include_adult=false&page=1&with_companies=2";
+    let url;
+    if (titulo !== undefined) {
+        url = "https://api.themoviedb.org/3/search/movie?api_key=4024f770e585ab0a055a70a260c83507&withcompanies=2&query=" + titulo;
+    } else {
+        url = "https://api.themoviedb.org/3/discover/movie?api_key=4024f770e585ab0a055a70a260c83507&include_adult=false&page=1&with_companies=2";
+    }
     xhr.open("GET", url);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
