@@ -6,13 +6,20 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{984F7DF3-5C13-4493-8FF6-29DC67A927CA}"
 	ProjectSection(SolutionItems) = preProject
 		app.js = app.js
+		app2.js = app2.js
+		Bootflix.jpg = Bootflix.jpg
 		bootstrap.min.css = bootstrap.min.css
 		DarthTato.JPG = DarthTato.JPG
 		DarthTato2.JPG = DarthTato2.JPG
+		DHsnhRqXYAA6_9G.jpg large.jfif = DHsnhRqXYAA6_9G.jpg large.jfif
 		index.html = index.html
+		pagina2.html = pagina2.html
+		pagina3.html = pagina3.html
 		Style.css = Style.css
 		Texto.txt = Texto.txt
 		up.jpg = up.jpg
+		índice.jfif = índice.jfif
+		índice2.jfif = índice2.jfif
 	EndProjectSection
 EndProject
 Global
